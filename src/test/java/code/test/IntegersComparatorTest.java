@@ -43,7 +43,7 @@ public class IntegersComparatorTest
     
     @Test
     public void printDuplicates() {
-        integers = iComparator.generateIntegersArray(1000, 1, 1000);
+        integers = iComparator.generateIntegersArray(10, 1, 1000);
         iComparator.printDuplicates(integers);
         
         //not really sure what to assert here!

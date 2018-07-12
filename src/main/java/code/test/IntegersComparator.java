@@ -31,16 +31,14 @@ public class IntegersComparator {
     }
     
     public void printDuplicates(Integer[] integers) {
+        Set<Integer> integersSet = new HashSet<Integer>(Arrays.asList(integers));
         System.out.println("The repeating elements are : ");
     
-        for (int i = 0; i < integers.length; i++) {
-            if (integers[Math.abs(integers[i])] >= 0) {
-                integers[Math.abs(integers[i])] = -integers[Math.abs(integers[i])];
+        for(int i : integers) {
+            if ( ! integersSet.add(i) ) { 
+                System.out.println(i);
             }
-            else {
-                System.out.println(Math.abs(integers[i]));
-            }
-        }         
+        }
     }
     
     public void printIntersectedIntegers(Integer[] integers1, Integer[] integers2) {
