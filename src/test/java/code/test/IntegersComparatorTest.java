@@ -43,10 +43,9 @@ public class IntegersComparatorTest
     
     @Test
     public void printDuplicates() {
-        integers = iComparator.generateIntegersArray(10, 1, 1000);
+        integers = iComparator.generateIntegersArray(10, 1, 10);
+//        Integer[] ints = new Integer[] {10,10,10};
         iComparator.printDuplicates(integers);
-        
-        //not really sure what to assert here!
     }
     
     @Test
@@ -54,7 +53,5 @@ public class IntegersComparatorTest
         integers = iComparator.generateIntegersArray(1000, 1, 1000);
         Integer[] integers2 = iComparator.generateIntegersArray(1000, 1, 1000);
         iComparator.printIntersectedIntegers(integers, integers2);
-        
-        //not really sure what to assert here!
     }
 }
